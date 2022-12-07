@@ -182,4 +182,6 @@ print(gs_knn.best_params_)
 On terminal run the following command to start the app on the default port: 5000
 flask run
 
+i.e http://127.0.0.1:5000
+
 ```
