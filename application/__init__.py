@@ -68,18 +68,20 @@ def predict():
 
     for key in droppedList:
         if key not in requestDataDict.keys():
-            requestDataDict[key] = inputDfTest[key]
+            requestDataDict[key] = inputDfTest[key][0]
 
     inputDf = pd.DataFrame(requestDataDict, index=[0])
-    # print('inputDf2: {}'.format(inputDf))
+    print('requestDataDict2: {}'.format(requestDataDict))
 
-
+    # set object types to data types corresponding to lightGBM
     for feature in obj_feat:
         inputDf[feature] = inputDf[feature].astype('category')
 
     for feature in floatobj_feat:
         inputDf[feature] = inputDf[feature].astype('int')
     
+    # print('inputDf: {}'.format(inputDf))
+
     #Make prediction using model
     prediction = loaded_model.predict(inputDf)
 
