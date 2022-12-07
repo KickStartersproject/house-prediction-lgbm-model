@@ -103,7 +103,7 @@ The dataset contains the following features:
 
 ```bash
 # clone the repo
-git clone https://github.com/KickStartersproject/house-prediction-lgbm-app.git
+git clone https://github.com/KickStartersproject/house-prediction-lgbm-model.git
 
 # change to the repo directory
 cd house-prediction-lgbm-ap
